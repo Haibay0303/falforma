@@ -13,6 +13,9 @@ content:
         label: Főoldal szövegei
         type: object
         fields:
+          - name: backgroundColor
+            label: Háttérszín
+            type: string
           - name: title
             label: Weboldal neve
             type: string
