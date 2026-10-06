@@ -1,0 +1,159 @@
+media:
+  input: media
+  output: /media
+
+content:
+  - name: site
+    label: Főoldal és beállítások
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: site
+        label: Főoldal szövegei
+        type: object
+        fields:
+          - name: title
+            label: Weboldal neve
+            type: string
+          - name: subtitle
+            label: Alcím
+            type: string
+          - name: heroTitle
+            label: Főcím
+            type: text
+          - name: heroLead
+            label: Bevezető szöveg
+            type: text
+          - name: heroCardTitle
+            label: Kiemelt kártya címe
+            type: string
+          - name: heroCardSubtitle
+            label: Kiemelt kártya szövege
+            type: string
+          - name: servicesHeading
+            label: Szolgáltatások címe
+            type: string
+          - name: servicesLead
+            label: Szolgáltatások bevezető
+            type: text
+          - name: referencesHeading
+            label: Referenciák címe
+            type: string
+          - name: referencesLead
+            label: Referenciák bevezető
+            type: text
+          - name: pricingHeading
+            label: Árak címe
+            type: string
+          - name: pricingLead
+            label: Árak bevezető
+            type: text
+          - name: pricingNote
+            label: Ár megjegyzés
+            type: text
+          - name: trustHeading
+            label: Bizalom szekció címe
+            type: string
+          - name: trustLead
+            label: Bizalom szekció bevezető
+            type: text
+          - name: contactHeading
+            label: Kapcsolat címe
+            type: string
+          - name: contactLead
+            label: Kapcsolat szövege
+            type: text
+          - name: contactEyebrow
+            label: Kapcsolat kis címke
+            type: string
+
+      - name: services
+        label: Szolgáltatások
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: id
+            label: Azonosító
+            type: string
+            readonly: true
+          - name: title
+            label: Név
+            type: string
+          - name: short
+            label: Rövid leírás
+            type: string
+          - name: eyebrow
+            label: Kis címke
+            type: string
+          - name: detailTitle
+            label: Részletes cím
+            type: string
+          - name: text
+            label: Részletes leírás
+            type: text
+          - name: items
+            label: Munkatípusok
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            fields:
+              - name: title
+                label: Megnevezés
+                type: string
+              - name: text
+                label: Leírás
+                type: text
+
+      - name: prices
+        label: Árak
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Munka
+            type: string
+          - name: price
+            label: Irányár
+            type: string
+
+      - name: references
+        label: Referenciák
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Cím
+            type: string
+          - name: description
+            label: Leírás
+            type: text
+          - name: image
+            label: Fotó
+            type: image
+
+      - name: trust
+        label: Miért FalForma?
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{title}"
+        fields:
+          - name: title
+            label: Cím
+            type: string
+          - name: text
+            label: Szöveg
+            type: text
