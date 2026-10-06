@@ -4,7 +4,7 @@
     "subtitle": "Gipszkartonozás & Festés",
     "heroTitle": "Szép falak.<br><em>Igényes munka.</em>",
     "heroLead": "Gipszkartonozás és festés magánlakásokhoz, felújításokhoz és kisebb-nagyobb munkákhoz. Precíz kivitelezés, rendezett munkavégzés.",
-    "heroCardTitle": "Otthon, amire jó ránézni.",
+    "heroCardTitle": "Igényes munka, szép végeredmény.",
     "heroCardSubtitle": "Hamarosan valódi referenciafotókkal.",
     "servicesHeading": "Amiben számíthatsz rám",
     "servicesLead": "A konkrét munkát és az árat minden esetben a helyszín és a feladat alapján egyeztetjük.",
@@ -140,13 +140,11 @@
   "references": [
     {
       "title": "Referencia #1",
-      "description": "Ide kerül majd egy saját munkafotó.",
-      "image": ""
+      "description": "Ide kerül majd egy saját munkafotó."
     },
     {
       "title": "Referencia #2",
-      "description": "Ide kerül majd egy saját munkafotó.",
-      "image": ""
+      "description": "Ide kerül majd egy saját munkafotó."
     }
   ],
   "trust": [
