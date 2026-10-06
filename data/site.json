@@ -1,0 +1,166 @@
+{
+  "site": {
+    "title": "FalForma",
+    "subtitle": "Gipszkartonozás & Festés",
+    "heroTitle": "Szép falak.<br><em>Igényes munka.</em>",
+    "heroLead": "Gipszkartonozás és festés magánlakásokhoz, felújításokhoz és kisebb-nagyobb munkákhoz. Precíz kivitelezés, rendezett munkavégzés.",
+    "heroCardTitle": "Otthon, amire jó ránézni.",
+    "heroCardSubtitle": "Hamarosan valódi referenciafotókkal.",
+    "servicesHeading": "Amiben számíthatsz rám",
+    "servicesLead": "A konkrét munkát és az árat minden esetben a helyszín és a feladat alapján egyeztetjük.",
+    "referencesHeading": "Referencia munkák",
+    "referencesLead": "Ide kerülnek majd a saját munkáid. A jó előtte–utána képek itt lesznek az oldal egyik legerősebb részei.",
+    "pricingHeading": "Árak",
+    "pricingLead": "Az alábbiak csak kiinduló irányárak. A pontos ajánlat a helyszín és a munka műszaki tartalma alapján készül.",
+    "pricingNote": "* A végleges ár függhet a felület állapotától, a rétegrendtől, a helyszíntől és a szükséges előkészítéstől.",
+    "trustHeading": "Miért FalForma?",
+    "trustLead": "Egyszerű, korrekt kommunikáció és olyan végeredmény, amit jó érzés átadni.",
+    "contactHeading": "Van egy fal, ami ráférne a változás?",
+    "contactLead": "Írd meg röviden, milyen munkát szeretnél. Később ide kerülhet telefonszám, e-mail és akár közvetlen időpontfoglalás is.",
+    "contactEyebrow": "Kérj ajánlatot"
+  },
+  "services": [
+    {
+      "id": "gipszkarton",
+      "title": "Gipszkartonozás",
+      "short": "Falak, mennyezetek, egyedi megoldások",
+      "eyebrow": "Gipszkartonozás",
+      "detailTitle": "Nem csak falakat építünk.",
+      "text": "A gipszkarton sokféle helyzetre jó megoldás. A szerkezet kialakításától a felület előkészítéséig az adott munkához igazodó kivitelezést vállalok.",
+      "items": [
+        {
+          "title": "Válaszfalak",
+          "text": "Új helyiségek kialakítása, terek átalakítása."
+        },
+        {
+          "title": "Előtétfalak",
+          "text": "Falburkolás, gépészeti vezetékek eltakarása."
+        },
+        {
+          "title": "Álmennyezetek",
+          "text": "Szerelt és egyedi mennyezeti megoldások."
+        },
+        {
+          "title": "Dobozolások",
+          "text": "Csövek, vezetékek és gépészeti elemek eltakarása."
+        },
+        {
+          "title": "Egyedi megoldások",
+          "text": "Polcok, térelválasztók és dekorációs elemek."
+        },
+        {
+          "title": "Javítások",
+          "text": "Sérült vagy átalakítandó gipszkarton felületek javítása."
+        }
+      ]
+    },
+    {
+      "id": "gletteles",
+      "title": "Glettelés",
+      "short": "Sima, festésre kész felületek",
+      "eyebrow": "Glettelés",
+      "detailTitle": "A szép festés alapja a jó felület.",
+      "text": "A megfelelően előkészített fal sokat számít a végső látványban. A javítástól és hézagolástól a teljes felület simításáig vállalok felület-előkészítést.",
+      "items": [
+        {
+          "title": "Hézagolás",
+          "text": "Gipszkarton lapok illesztéseinek szakszerű kezelése."
+        },
+        {
+          "title": "Teljes felületű glettelés",
+          "text": "Falak és mennyezetek simítása festés előtt."
+        },
+        {
+          "title": "Q2 / Q3 / Q4",
+          "text": "A kívánt felületi minőséghez igazodó előkészítés."
+        },
+        {
+          "title": "Repedések javítása",
+          "text": "Kisebb hibák, repedések és sérülések javítása."
+        },
+        {
+          "title": "Csiszolás",
+          "text": "Egyenletes, festésre alkalmas felület kialakítása."
+        },
+        {
+          "title": "Alapozás előkészítése",
+          "text": "A festéshez szükséges végső felület előkészítése."
+        }
+      ]
+    },
+    {
+      "id": "festes",
+      "title": "Festés",
+      "short": "Szobák, lakások, mennyezetek",
+      "eyebrow": "Festés",
+      "detailTitle": "Friss színek, rendezett végeredmény.",
+      "text": "Legyen szó egyetlen szobáról vagy teljes lakásról, a festés előtt fontos a megfelelő előkészítés. A munkát az adott felület állapotához igazítom.",
+      "items": [
+        {
+          "title": "Tisztasági festés",
+          "text": "Gyors felfrissítés jó állapotú falakon."
+        },
+        {
+          "title": "Szobafestés",
+          "text": "Falak és mennyezetek újrafestése."
+        },
+        {
+          "title": "Lakásfestés",
+          "text": "Több helyiség egységes, összehangolt festése."
+        },
+        {
+          "title": "Mennyezetfestés",
+          "text": "Mennyezetek festése a szükséges előkészítéssel."
+        },
+        {
+          "title": "Színváltás",
+          "text": "Új színek kialakítása, a felülethez igazított előkészítéssel."
+        },
+        {
+          "title": "Javítófestés",
+          "text": "Kisebb sérülések és hibák esztétikus javítása."
+        }
+      ]
+    }
+  ],
+  "prices": [
+    {
+      "title": "Festés",
+      "price": "ár hamarosan"
+    },
+    {
+      "title": "Glettelés",
+      "price": "ár hamarosan"
+    },
+    {
+      "title": "Gipszkarton",
+      "price": "ár hamarosan"
+    }
+  ],
+  "references": [
+    {
+      "title": "Referencia #1",
+      "description": "Ide kerül majd egy saját munkafotó.",
+      "image": ""
+    },
+    {
+      "title": "Referencia #2",
+      "description": "Ide kerül majd egy saját munkafotó.",
+      "image": ""
+    }
+  ],
+  "trust": [
+    {
+      "title": "Precíz kivitelezés",
+      "text": "A részletekre is figyelünk, mert a szép végeredmény az előkészítésnél kezdődik."
+    },
+    {
+      "title": "Rendezett munkavégzés",
+      "text": "Fontos, hogy a munka ne csak elkészüljön, hanem a környezet is rendben maradjon."
+    },
+    {
+      "title": "Egyeztetett ár",
+      "text": "A munkakezdés előtt tisztázzuk a feladatot és a várható költségeket."
+    }
+  ]
+}

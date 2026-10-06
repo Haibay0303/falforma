@@ -96,8 +96,8 @@
     <div class="wrap" style="display:contents">
       <div>
         <span class="eyebrow">Gipszkartonozás • Festés</span>
-        <h1>Szép falak.<br><em>Igényes munka.</em></h1>
-        <p class="lead">Gipszkartonozás és festés magánlakásokhoz, felújításokhoz és kisebb-nagyobb munkákhoz. Precíz kivitelezés, rendezett munkavégzés.</p>
+        <h1 id="hero-title">Szép falak.<br><em>Igényes munka.</em></h1>
+        <p class="lead" id="hero-lead">Gipszkartonozás és festés magánlakásokhoz, felújításokhoz és kisebb-nagyobb munkákhoz. Precíz kivitelezés, rendezett munkavégzés.</p>
         <div class="actions">
           <a class="btn primary" href="#ajanlat">Ajánlatot kérek</a>
           <a class="btn secondary" href="#munkak">Munkáink</a>
@@ -107,8 +107,8 @@
         <div class="fake-room"></div>
         <div class="card-content">
           <small>FalForma</small>
-          <h3>Otthon, amire jó ránézni.</h3>
-          <small>Hamarosan valódi referenciafotókkal.</small>
+          <h3 id="hero-card-title">Otthon, amire jó ránézni.</h3>
+          <small id="hero-card-subtitle">Hamarosan valódi referenciafotókkal.</small>
         </div>
       </div>
     </div>
@@ -117,53 +117,21 @@
   <section id="munkak">
     <div class="wrap">
       <div class="section-head">
-        <h2>Amiben számíthatsz rám</h2>
-        <p>A konkrét munkát és az árat minden esetben a helyszín és a feladat alapján egyeztetjük.</p>
+        <h2 id="services-heading">Amiben számíthatsz rám</h2>
+        <p id="services-lead">A konkrét munkát és az árat minden esetben a helyszín és a feladat alapján egyeztetjük.</p>
       </div>
-      <div class="service-grid">
-        <button class="service service-btn active" onclick="showService('gipszkarton', this)">
-          <span class="num">01</span>
-          <span class="service-title">Gipszkartonozás <span>+</span></span>
-          <small>Falak, mennyezetek, egyedi megoldások</small>
-        </button>
-        <button class="service service-btn" onclick="showService('gletteles', this)">
-          <span class="num">02</span>
-          <span class="service-title">Glettelés <span>+</span></span>
-          <small>Sima, festésre kész felületek</small>
-        </button>
-        <button class="service service-btn" onclick="showService('festes', this)">
-          <span class="num">03</span>
-          <span class="service-title">Festés <span>+</span></span>
-          <small>Szobák, lakások, mennyezetek</small>
-        </button>
-      </div>
-
-      <div class="service-detail" id="service-detail">
-        <div>
-          <span class="eyebrow">Gipszkartonozás</span>
-          <h3>Nem csak falakat építünk.</h3>
-          <p>A gipszkarton sokféle helyzetre jó megoldás. A szerkezet kialakításától a felület előkészítéséig az adott munkához igazodó kivitelezést vállalok.</p>
-        </div>
-        <div class="detail-list">
-          <div><b>Válaszfalak</b><span>Új helyiségek kialakítása, terek átalakítása.</span></div>
-          <div><b>Előtétfalak</b><span>Falburkolás, gépészeti vezetékek eltakarása.</span></div>
-          <div><b>Álmennyezetek</b><span>Szerelt és egyedi mennyezeti megoldások.</span></div>
-          <div><b>Dobozolások</b><span>Csövek, vezetékek és gépészeti elemek eltakarása.</span></div>
-          <div><b>Egyedi megoldások</b><span>Polcok, térelválasztók és dekorációs elemek.</span></div>
-          <div><b>Javítások</b><span>Sérült vagy átalakítandó gipszkarton felületek javítása.</span></div>
-        </div>
-      </div>
+      <div class="service-grid" id="service-grid"></div>
+      <div class="service-detail" id="service-detail"></div>
     </div>
   </section>
 
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Referencia munkák</h2>
-        <p>Ide kerülnek majd a saját munkáid. A jó előtte–utána képek itt lesznek az oldal egyik legerősebb részei.</p>
+        <h2 id="references-heading">Referencia munkák</h2>
+        <p id="references-lead">Ide kerülnek majd a saját munkáid. A jó előtte–utána képek itt lesznek az oldal egyik legerősebb részei.</p>
       </div>
-      <div class="references">
-        <div class="placeholder"><div><b>Referencia #1</b>Ide kerül majd egy saját munkafotó.</div></div>
+      <div class="references" id="references-grid"></div></div>
         <div class="placeholder"><div><b>Referencia #2</b>Ide kerül majd egy saját munkafotó.</div></div>
       </div>
     </div>
@@ -173,15 +141,14 @@
     <div class="wrap">
       <div class="pricing">
         <div class="section-head" style="margin:0">
-          <h2>Árak</h2>
-          <p style="color:#c7c4bd">Az alábbiak csak kiinduló irányárak. A pontos ajánlat a helyszín és a munka műszaki tartalma alapján készül.</p>
+          <h2 id="pricing-heading">Árak</h2>
+          <p id="pricing-lead" style="color:#c7c4bd">Az alábbiak csak kiinduló irányárak. A pontos ajánlat a helyszín és a munka műszaki tartalma alapján készül.</p>
         </div>
-        <div class="price-grid">
-          <div class="price"><strong>Festés</strong><p>ár hamarosan</p></div>
+        <div class="price-grid" id="price-grid"></div>
           <div class="price"><strong>Glettelés</strong><p>ár hamarosan</p></div>
           <div class="price"><strong>Gipszkarton</strong><p>ár hamarosan</p></div>
         </div>
-        <div class="note">* A végleges ár függhet a felület állapotától, a rétegrendtől, a helyszíntől és a szükséges előkészítéstől.</div>
+        <div class="note" id="pricing-note">* A végleges ár függhet a felület állapotától, a rétegrendtől, a helyszíntől és a szükséges előkészítéstől.</div>
       </div>
     </div>
   </section>
@@ -189,11 +156,10 @@
   <section>
     <div class="wrap">
       <div class="section-head">
-        <h2>Miért FalForma?</h2>
-        <p>Egyszerű, korrekt kommunikáció és olyan végeredmény, amit jó érzés átadni.</p>
+        <h2 id="trust-heading">Miért FalForma?</h2>
+        <p id="trust-lead">Egyszerű, korrekt kommunikáció és olyan végeredmény, amit jó érzés átadni.</p>
       </div>
-      <div class="trust">
-        <div><h3>Precíz kivitelezés</h3><p>A részletekre is figyelünk, mert a szép végeredmény az előkészítésnél kezdődik.</p></div>
+      <div class="trust" id="trust-grid"></div>
         <div><h3>Rendezett munkavégzés</h3><p>Fontos, hogy a munka ne csak elkészüljön, hanem a környezet is rendben maradjon.</p></div>
         <div><h3>Egyeztetett ár</h3><p>A munkakezdés előtt tisztázzuk a feladatot és a várható költségeket.</p></div>
       </div>
@@ -205,8 +171,8 @@
       <div class="contact">
         <div>
           <span class="eyebrow">Kérj ajánlatot</span>
-          <h2>Van egy fal, ami ráférne a változás?</h2>
-          <p>Írd meg röviden, milyen munkát szeretnél. Később ide kerülhet telefonszám, e-mail és akár közvetlen időpontfoglalás is.</p>
+          <h2 id="contact-heading">Van egy fal, ami ráférne a változás?</h2>
+          <p id="contact-lead">Írd meg röviden, milyen munkát szeretnél. Később ide kerülhet telefonszám, e-mail és akár közvetlen időpontfoglalás is.</p>
         </div>
         <form onsubmit="event.preventDefault(); alert('Köszönöm! Az űrlap működését a kapcsolatfelvételi rendszer bekötésekor aktiváljuk.');">
           <input class="field" type="text" placeholder="Név" required>
@@ -226,55 +192,89 @@
 </footer>
 
 <script>
-const serviceData = {
-  gipszkarton: {
-    eyebrow:"Gipszkartonozás",
-    title:"Nem csak falakat építünk.",
-    text:"A gipszkarton sokféle helyzetre jó megoldás. A szerkezet kialakításától a felület előkészítéséig az adott munkához igazodó kivitelezést vállalok.",
-    items:[
-      ["Válaszfalak","Új helyiségek kialakítása, terek átalakítása."],
-      ["Előtétfalak","Falburkolás, gépészeti vezetékek eltakarása."],
-      ["Álmennyezetek","Szerelt és egyedi mennyezeti megoldások."],
-      ["Dobozolások","Csövek, vezetékek és gépészeti elemek eltakarása."],
-      ["Egyedi megoldások","Polcok, térelválasztók és dekorációs elemek."],
-      ["Javítások","Sérült vagy átalakítandó gipszkarton felületek javítása."]
-    ]
-  },
-  gletteles: {
-    eyebrow:"Glettelés",
-    title:"A szép festés alapja a jó felület.",
-    text:"A megfelelően előkészített fal sokat számít a végső látványban. A javítástól és hézagolástól a teljes felület simításáig vállalok felület-előkészítést.",
-    items:[
-      ["Hézagolás","Gipszkarton lapok illesztéseinek szakszerű kezelése."],
-      ["Teljes felületű glettelés","Falak és mennyezetek simítása festés előtt."],
-      ["Q2 / Q3 / Q4","A kívánt felületi minőséghez igazodó előkészítés."],
-      ["Repedések javítása","Kisebb hibák, repedések és sérülések javítása."],
-      ["Csiszolás","Egyenletes, festésre alkalmas felület kialakítása."],
-      ["Alapozás előkészítése","A festéshez szükséges végső felület előkészítése."]
-    ]
-  },
-  festes: {
-    eyebrow:"Festés",
-    title:"Friss színek, rendezett végeredmény.",
-    text:"Legyen szó egyetlen szobáról vagy teljes lakásról, a festés előtt fontos a megfelelő előkészítés. A munkát az adott felület állapotához igazítom.",
-    items:[
-      ["Tisztasági festés","Gyors felfrissítés jó állapotú falakon."],
-      ["Szobafestés","Falak és mennyezetek újrafestése."],
-      ["Lakásfestés","Több helyiség egységes, összehangolt festése."],
-      ["Mennyezetfestés","Mennyezetek festése a szükséges előkészítéssel."],
-      ["Színváltás","Új színek kialakítása, a felülethez igazított előkészítéssel."],
-      ["Javítófestés","Kisebb sérülések és hibák esztétikus javítása."]
-    ]
-  }
-};
+let siteData = null;
+
+const fallbackServices = [
+  {id:"gipszkarton", title:"Gipszkartonozás", short:"Falak, mennyezetek, egyedi megoldások", eyebrow:"Gipszkartonozás", detailTitle:"Nem csak falakat építünk.", text:"A gipszkarton sokféle helyzetre jó megoldás. A szerkezet kialakításától a felület előkészítéséig az adott munkához igazodó kivitelezést vállalok.", items:[["Válaszfalak","Új helyiségek kialakítása, terek átalakítása."],["Előtétfalak","Falburkolás, gépészeti vezetékek eltakarása."],["Álmennyezetek","Szerelt és egyedi mennyezeti megoldások."],["Dobozolások","Csövek, vezetékek és gépészeti elemek eltakarása."],["Egyedi megoldások","Polcok, térelválasztók és dekorációs elemek."],["Javítások","Sérült vagy átalakítandó gipszkarton felületek javítása."]]},
+  {id:"gletteles", title:"Glettelés", short:"Sima, festésre kész felületek", eyebrow:"Glettelés", detailTitle:"A szép festés alapja a jó felület.", text:"A megfelelően előkészített fal sokat számít a végső látványban. A javítástól és hézagolástól a teljes felület simításáig vállalok felület-előkészítést.", items:[["Hézagolás","Gipszkarton lapok illesztéseinek szakszerű kezelése."],["Teljes felületű glettelés","Falak és mennyezetek simítása festés előtt."],["Q2 / Q3 / Q4","A kívánt felületi minőséghez igazodó előkészítés."],["Repedések javítása","Kisebb hibák, repedések és sérülések javítása."],["Csiszolás","Egyenletes, festésre alkalmas felület kialakítása."],["Alapozás előkészítése","A festéshez szükséges végső felület előkészítése."]]},
+  {id:"festes", title:"Festés", short:"Szobák, lakások, mennyezetek", eyebrow:"Festés", detailTitle:"Friss színek, rendezett végeredmény.", text:"Legyen szó egyetlen szobáról vagy teljes lakásról, a festés előtt fontos a megfelelő előkészítés. A munkát az adott felület állapotához igazítom.", items:[["Tisztasági festés","Gyors felfrissítés jó állapotú falakon."],["Szobafestés","Falak és mennyezetek újrafestése."],["Lakásfestés","Több helyiség egységes, összehangolt festése."],["Mennyezetfestés","Mennyezetek festése a szükséges előkészítéssel."],["Színváltás","Új színek kialakítása, a felülethez igazított előkészítéssel."],["Javítófestés","Kisebb sérülések és hibák esztétikus javítása."]]}
+];
 
 function showService(key, button){
-  const d=serviceData[key], box=document.getElementById("service-detail");
+  const d = siteData?.services?.find(x => x.id === key) || fallbackServices.find(x => x.id === key);
+  if(!d) return;
   document.querySelectorAll(".service-btn").forEach(b=>b.classList.remove("active"));
-  button.classList.add("active");
-  box.innerHTML = `<div><span class="eyebrow">${d.eyebrow}</span><h3>${d.title}</h3><p>${d.text}</p></div>
-    <div class="detail-list">${d.items.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}</div>`;
+  if(button) button.classList.add("active");
+  const box=document.getElementById("service-detail");
+  box.innerHTML = `<div><span class="eyebrow">${d.eyebrow}</span><h3>${d.detailTitle}</h3><p>${d.text}</p></div>
+    <div class="detail-list">${d.items.map(x=>`<div><b>${x.title || x[0]}</b><span>${x.text || x[1]}</span></div>`).join("")}</div>`;
 }
+
+function render(data){
+  siteData=data;
+  const s=data.site;
+  document.title = s.title + " | " + s.subtitle;
+  document.querySelector(".brand").innerHTML = 'Fal<span>Forma</span>';
+  document.getElementById("hero-title").innerHTML = s.heroTitle;
+  document.getElementById("hero-lead").textContent = s.heroLead;
+  document.getElementById("hero-card-title").textContent = s.heroCardTitle;
+  document.getElementById("hero-card-subtitle").textContent = s.heroCardSubtitle;
+  document.getElementById("services-heading").textContent = s.servicesHeading;
+  document.getElementById("services-lead").textContent = s.servicesLead;
+  document.getElementById("references-heading").textContent = s.referencesHeading;
+  document.getElementById("references-lead").textContent = s.referencesLead;
+  document.getElementById("pricing-heading").textContent = s.pricingHeading;
+  document.getElementById("pricing-lead").textContent = s.pricingLead;
+  document.getElementById("pricing-note").textContent = s.pricingNote;
+  document.getElementById("trust-heading").textContent = s.trustHeading;
+  document.getElementById("trust-lead").textContent = s.trustLead;
+  document.getElementById("contact-heading").textContent = s.contactHeading;
+  document.getElementById("contact-lead").textContent = s.contactLead;
+
+  const serviceGrid=document.getElementById("service-grid");
+  serviceGrid.innerHTML=(data.services || fallbackServices).map((x,i)=>`
+    <button class="service service-btn ${i===0?'active':''}" onclick="showService('${x.id}', this)">
+      <span class="num">0${i+1}</span>
+      <span class="service-title">${x.title} <span>+</span></span>
+      <small>${x.short}</small>
+    </button>`).join("");
+  showService((data.services?.[0] || fallbackServices[0]).id, serviceGrid.querySelector("button"));
+
+  const refGrid=document.getElementById("references-grid");
+  refGrid.innerHTML=(data.references || []).map((r,i)=>r.image
+    ? `<div class="placeholder" style="padding:0;overflow:hidden"><img src="${r.image}" alt="${r.title}" style="width:100%;height:100%;min-height:280px;object-fit:cover"><div style="position:absolute"></div></div>`
+    : `<div class="placeholder"><div><b>${r.title || "Referencia"}</b>${r.description || "Ide kerül majd egy saját munkafotó."}</div></div>`).join("");
+
+  document.getElementById("price-grid").innerHTML=(data.prices || []).map(p=>`
+    <div class="price"><strong>${p.title}</strong><p>${p.price}</p></div>`).join("");
+
+  document.getElementById("trust-grid").innerHTML=(data.trust || []).map(t=>`
+    <div><h3>${t.title}</h3><p>${t.text}</p></div>`).join("");
+
+  document.querySelector(".contact .eyebrow").textContent=s.contactEyebrow;
+}
+
+fetch("./data/site.json")
+  .then(r => r.json())
+  .then(render)
+  .catch(() => render({
+    site:{
+      title:"FalForma",subtitle:"Gipszkartonozás & Festés",
+      heroTitle:"Szép falak.<br><em>Igényes munka.</em>",
+      heroLead:"Gipszkartonozás és festés magánlakásokhoz, felújításokhoz és kisebb-nagyobb munkákhoz. Precíz kivitelezés, rendezett munkavégzés.",
+      heroCardTitle:"Otthon, amire jó ránézni.",heroCardSubtitle:"Hamarosan valódi referenciafotókkal.",
+      servicesHeading:"Amiben számíthatsz rám",servicesLead:"A konkrét munkát és az árat minden esetben a helyszín és a feladat alapján egyeztetjük.",
+      referencesHeading:"Referencia munkák",referencesLead:"Ide kerülnek majd a saját munkáid. A jó előtte–utána képek itt lesznek az oldal egyik legerősebb részei.",
+      pricingHeading:"Árak",pricingLead:"Az alábbiak csak kiinduló irányárak. A pontos ajánlat a helyszín és a munka műszaki tartalma alapján készül.",
+      pricingNote:"* A végleges ár függhet a felület állapotától, a rétegrendtől, a helyszíntől és a szükséges előkészítéstől.",
+      trustHeading:"Miért FalForma?",trustLead:"Egyszerű, korrekt kommunikáció és olyan végeredmény, amit jó érzés átadni.",
+      contactHeading:"Van egy fal, ami ráférne a változás?",contactLead:"Írd meg röviden, milyen munkát szeretnél. Később ide kerülhet telefonszám, e-mail és akár közvetlen időpontfoglalás is.",contactEyebrow:"Kérj ajánlatot"
+    },
+    services:fallbackServices,
+    prices:[{title:"Festés",price:"ár hamarosan"},{title:"Glettelés",price:"ár hamarosan"},{title:"Gipszkarton",price:"ár hamarosan"}],
+    references:[{title:"Referencia #1",description:"Ide kerül majd egy saját munkafotó."},{title:"Referencia #2",description:"Ide kerül majd egy saját munkafotó."}],
+    trust:[{title:"Precíz kivitelezés",text:"A részletekre is figyelünk, mert a szép végeredmény az előkészítésnél kezdődik."},{title:"Rendezett munkavégzés",text:"Fontos, hogy a munka ne csak elkészüljön, hanem a környezet is rendben maradjon."},{title:"Egyeztetett ár",text:"A munkakezdés előtt tisztázzuk a feladatot és a várható költségeket."}]
+  }));
 </script>
 
 </body>
