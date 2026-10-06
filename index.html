@@ -254,7 +254,7 @@ function render(data){
   document.querySelector(".contact .eyebrow").textContent=s.contactEyebrow;
 }
 
-fetch("./data/site.json")
+fetch("./data/site.json?v=" + Date.now(), {cache:"no-store"})
   .then(r => r.json())
   .then(render)
   .catch(() => render({
