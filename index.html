@@ -213,6 +213,7 @@ function showService(key, button){
 function render(data){
   siteData=data;
   const s=data.site;
+  document.documentElement.style.setProperty("--bg", s.backgroundColor || "#f7f6f2");
   document.title = s.title + " | " + s.subtitle;
   document.querySelector(".brand").innerHTML = 'Fal<span>Forma</span>';
   document.getElementById("hero-title").innerHTML = s.heroTitle;
