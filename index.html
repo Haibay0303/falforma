@@ -281,7 +281,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 document.querySelectorAll("#references-grid img").forEach((img) => {
-  img.style.cursor = "zoom-in";
+  img.style.cursor = "pointer";
   img.addEventListener("click", () => {
     lightboxImage.src = img.src;
     lightbox.style.display = "flex";
