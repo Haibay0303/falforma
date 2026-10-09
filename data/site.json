@@ -141,12 +141,12 @@
   "references": [
     {
       "title": "Referencia #1",
-      "image": "/media/falforma_harom_referencia_egyben.jpg"
+      "image": "media/falforma_harom_referencia_egyben.jpg"
     },
     {
       "title": "Referencia #2",
       "description": "Ide kerül majd egy saját munkafotó.",
-      "image": "/media/tetoter_harom_kep_egymas_mellett_csik_nelkul.jpg"
+      "image": "media/tetoter_harom_kep_egymas_mellett_csik_nelkul.jpg"
     },
     {
       "title": "Referencia #3"
