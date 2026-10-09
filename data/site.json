@@ -141,11 +141,12 @@
   "references": [
     {
       "title": "Referencia #1",
-      "image": "media/1000001327.jpg"
+      "image": "/media/1000001327.jpg"
     },
     {
       "title": "Referencia #2",
-      "description": "Ide kerül majd egy saját munkafotó."
+      "description": "Ide kerül majd egy saját munkafotó.",
+      "image": "/media/1000000984.jpg"
     }
   ],
   "trust": [
