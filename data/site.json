@@ -141,16 +141,16 @@
   "references": [
     {
       "title": "Referencia #1",
-      "image": "/media/falforma_harom_referencia_egyben.jpg"
+      "image": "media/falforma_harom_referencia_egyben.jpg"
     },
     {
       "title": "Referencia #2",
       "description": "Ide kerül majd egy saját munkafotó.",
-      "image": "/media/Tetőtér-felújítás három szakaszban.png"
+      "image": "media/Tetőtér-felújítás három szakaszban.png"
     },
     {
       "title": "Referencia #3",
-      "image": "/media/tetoter_harom_fazis_helyes_sorrend.jpg"
+      "image": "media/tetoter_harom_fazis_helyes_sorrend.jpg"
     }
   ],
   "trust": [
