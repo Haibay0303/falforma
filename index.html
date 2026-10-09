@@ -245,6 +245,49 @@ function render(data){
 
   document.getElementById("price-grid").innerHTML=(data.prices || []).map(p=>`
     <div class="price"><strong>${p.title}</strong><p>${p.price}</p></div>`).join("");
+  const lightbox = document.createElement("div");
+lightbox.id = "reference-lightbox";
+lightbox.style.cssText = "display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.92);align-items:center;justify-content:center;padding:20px;box-sizing:border-box;";
+
+lightbox.innerHTML = `
+  <button type="button" aria-label="Bezárás"
+    style="position:absolute;top:15px;right:20px;border:0;background:transparent;color:white;font-size:42px;cursor:pointer;z-index:2;">&times;</button>
+  <img alt="Referencia munka nagy méretben"
+    style="display:block;max-width:100%;max-height:90vh;width:auto;height:auto;object-fit:contain;border-radius:8px;">
+`;
+
+document.body.appendChild(lightbox);
+
+const lightboxImage = lightbox.querySelector("img");
+const lightboxClose = lightbox.querySelector("button");
+
+function closeReferenceLightbox() {
+  lightbox.style.display = "none";
+  document.body.style.overflow = "";
+}
+
+lightboxClose.addEventListener("click", closeReferenceLightbox);
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeReferenceLightbox();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeReferenceLightbox();
+  }
+});
+
+document.querySelectorAll("#references-grid img").forEach((img) => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener("click", () => {
+    lightboxImage.src = img.src;
+    lightbox.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  });
+});
 
   document.getElementById("trust-grid").innerHTML=(data.trust || []).map(t=>`
     <div><h3>${t.title}</h3><p>${t.text}</p></div>`).join("");
