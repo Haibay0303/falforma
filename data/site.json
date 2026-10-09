@@ -140,12 +140,13 @@
   ],
   "references": [
     {
-      "title": "Referencia #1"
+      "title": "Referencia #1",
+      "image": "/media/falforma_harom_referencia_egyben.jpg"
     },
     {
       "title": "Referencia #2",
       "description": "Ide kerül majd egy saját munkafotó.",
-      "image": "media/Tetőtér-felújítás három szakaszban.png"
+      "image": "/media/Tetőtér-felújítás három szakaszban.png"
     }
   ],
   "trust": [
