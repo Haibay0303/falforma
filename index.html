@@ -206,7 +206,20 @@ function showService(key, button){
   if(button) button.classList.add("active");
   const box=document.getElementById("service-detail");
   box.innerHTML = `<div><span class="eyebrow">${d.eyebrow}</span><h3>${d.detailTitle}</h3><p>${d.text}</p></div>
-    <div class="detail-list">${d.items.map(x=>`<div><b>${x.title || x[0]}</b><span>${x.text || x[1]}</span></div>`).join("")}</div>`;
+  <div class="detail-list">${d.items.map(x => `<div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:10px 0;">
+    <div><b>${x.title || x[0]}</b><span>${x.text || x[1]}</span></div>
+    ${x.image ? `<button type="button" class="item-image-toggle" aria-expanded="false" style="border:1px solid #ddd;border-radius:50%;width:30px;height:30px;background:white;cursor:pointer;font-size:20px;">+</button><img src="${x.image}" alt="${x.title || x[0]}" style="display:none;grid-column:1/-1;width:100%;max-width:260px;max-height:180px;object-fit:contain;border-radius:8px;margin-top:8px;">` : ""}
+  </div>`).join("")}</div>`;
+
+box.querySelectorAll(".item-image-toggle").forEach(button => {
+  button.addEventListener("click", () => {
+    const image = button.nextElementSibling;
+    const isOpen = image.style.display !== "none";
+    image.style.display = isOpen ? "none" : "block";
+    button.textContent = isOpen ? "+" : "−";
+    button.setAttribute("aria-expanded", String(!isOpen));
+  });
+});
 }
 
 function render(data){
