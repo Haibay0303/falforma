@@ -279,17 +279,70 @@ lightbox.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeReferenceLightbox();
+    return;
+  }
+
+  if (lightbox.style.display !== "flex") return;
+
+  if (event.key === "ArrowLeft") {
+    showPreviousReference();
+  } else if (event.key === "ArrowRight") {
+    showNextReference();
   }
 });
 
-document.querySelectorAll("#references-grid img").forEach((img) => {
+const referenceImages = Array.from(
+  document.querySelectorAll("#references-grid img")
+);
+
+let currentReferenceIndex = 0;
+
+lightbox.insertAdjacentHTML(
+  "beforeend",
+  `
+    <button type="button" id="lightbox-prev" aria-label="Előző kép"
+      style="position:absolute;left:20px;top:50%;transform:translateY(-50%);border:0;border-radius:50%;width:48px;height:48px;background:rgba(255,255,255,.18);color:white;font-size:32px;cursor:pointer;z-index:3;">&#8249;</button>
+    <button type="button" id="lightbox-next" aria-label="Következő kép"
+      style="position:absolute;right:20px;top:50%;transform:translateY(-50%);border:0;border-radius:50%;width:48px;height:48px;background:rgba(255,255,255,.18);color:white;font-size:32px;cursor:pointer;z-index:3;">&#8250;</button>
+  `
+);
+
+const lightboxPrev = lightbox.querySelector("#lightbox-prev");
+const lightboxNext = lightbox.querySelector("#lightbox-next");
+
+function showReferenceImage(index) {
+  if (!referenceImages.length) return;
+
+  currentReferenceIndex =
+    (index + referenceImages.length) % referenceImages.length;
+
+  const selectedImage = referenceImages[currentReferenceIndex];
+  lightboxImage.src = selectedImage.src;
+  lightboxImage.alt = selectedImage.alt || "Referencia munka";
+}
+
+function showPreviousReference() {
+  showReferenceImage(currentReferenceIndex - 1);
+}
+
+function showNextReference() {
+  showReferenceImage(currentReferenceIndex + 1);
+}
+
+lightboxPrev.addEventListener("click", showPreviousReference);
+lightboxNext.addEventListener("click", showNextReference);
+
+referenceImages.forEach((img, index) => {
   img.style.cursor = "pointer";
+
   img.addEventListener("click", () => {
-    lightboxImage.src = img.src;
+    showReferenceImage(index);
     lightbox.style.display = "flex";
     document.body.style.overflow = "hidden";
   });
 });
+
+
 
   document.getElementById("trust-grid").innerHTML=(data.trust || []).map(t=>`
     <div><h3>${t.title}</h3><p>${t.text}</p></div>`).join("");
