@@ -206,18 +206,48 @@ function showService(key, button){
   if(button) button.classList.add("active");
   const box=document.getElementById("service-detail");
   box.innerHTML = `<div><span class="eyebrow">${d.eyebrow}</span><h3>${d.detailTitle}</h3><p>${d.text}</p></div>
-  <div class="detail-list">${d.items.map(x => `<div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;padding:10px 0;">
-    <div><b>${x.title || x[0]}</b><span>${x.text || x[1]}</span></div>
-    ${x.image ? `<button type="button" class="item-image-toggle" aria-expanded="false" style="border:1px solid #ddd;border-radius:50%;width:30px;height:30px;background:white;cursor:pointer;font-size:20px;">+</button><img src="${x.image}" alt="${x.title || x[0]}" style="display:none;grid-column:1/-1;width:100%;max-width:420px;max-height:320px;object-fit:contain;border-radius:8px;margin-top:8px;">` : ""}
-  </div>`).join("")}</div>`;
+<div class="detail-list">${d.items.map(x => `
+<div class="detail-item" style="background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;grid-column:auto;">
+  <div style="display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;">
+    <div><b>${x.title || x[0]}</b><br><span>${x.text || x[1]}</span></div>
+    ${x.image ? `<button type="button" class="item-image-toggle" aria-expanded="false" style="border:1px solid #ddd;border-radius:50%;width:30px;height:30px;background:white;cursor:pointer;font-size:20px;">+</button>` : ""}
+  </div>
+  ${x.image ? `<div class="item-image-panel" style="display:none;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;padding-top:20px;">
+    <img src="${x.image}" alt="${x.title || x[0]}" style="width:100%;max-width:none;max-height:480px;object-fit:contain;border-radius:8px;">
+    ${x.title === "Válaszfalak" ? `<div style="padding:10px 0;">
+      <h4 style="font-size:22px;margin:0 0 16px;">A válaszfal építésének folyamata</h4>
+      <ol style="padding-left:22px;line-height:1.9;">
+        <li>A fal helyének kimérése és kijelölése.</li>
+        <li>UW és CW profilokból a tartószerkezet kialakítása.</li>
+        <li>Elektromos vezetékek és szükséges szerelvények elhelyezése.</li>
+        <li>Ásványgyapot szigetelés beépítése, ha szükséges.</li>
+        <li>Gipszkarton lapok rögzítése a szerkezetre.</li>
+        <li>Hézagolás, glettelés és a felület festésre való előkészítése.</li>
+      </ol>
+    </div>` : ""}
+  </div>` : ""}
+</div>`).join("")}</div>`;
 
 box.querySelectorAll(".item-image-toggle").forEach(button => {
   button.addEventListener("click", () => {
-    const image = button.nextElementSibling;
-    const isOpen = image.style.display !== "none";
-    image.style.display = isOpen ? "none" : "block";
-    button.textContent = isOpen ? "+" : "−";
-    button.setAttribute("aria-expanded", String(!isOpen));
+    const item = button.closest(".detail-item");
+    const panel = item.querySelector(".item-image-panel");
+    const isOpen = panel.style.display !== "none";
+
+    box.querySelectorAll(".item-image-panel").forEach(p => {
+      p.style.display = "none";
+      p.closest(".detail-item").style.gridColumn = "auto";
+      const b = p.closest(".detail-item").querySelector(".item-image-toggle");
+      b.textContent = "+";
+      b.setAttribute("aria-expanded", "false");
+    });
+
+    if (!isOpen) {
+      panel.style.display = "grid";
+      item.style.gridColumn = "1 / -1";
+      button.textContent = "−";
+      button.setAttribute("aria-expanded", "true");
+    }
   });
 });
 }
