@@ -79,6 +79,52 @@
       .contact{padding:28px;gap:25px}.contact h2{font-size:34px}.navlink{display:none}
       footer{display:block} footer div+div{margin-top:8px}
     }
+    .hero{
+  display:block;
+  padding:20px 12px;
+  background:
+    linear-gradient(90deg,rgba(20,20,20,.88) 0%,rgba(20,20,20,.68) 38%,rgba(20,20,20,.18) 100%),
+    url("media/menyezet%20szerkezet.jpg") center/cover no-repeat;
+  border-radius:30px;
+  overflow:hidden;
+}
+.hero > .wrap{
+  display:grid!important;
+  grid-template-columns:1fr;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:55px 4%;
+}
+.hero-card{
+  display:none!important;
+}
+.hero h1{
+  color:#fff;
+}
+.hero .eyebrow{
+  color:#fff;
+  border-color:rgba(255,255,255,.4);
+  background:rgba(0,0,0,.2);
+}
+.hero .lead{
+  color:#fff;
+}
+.hero .btn.primary{
+  background:var(--accent);
+  color:#171717;
+  border-color:var(--accent);
+}
+.hero .btn.secondary{
+  color:#fff;
+  border-color:rgba(255,255,255,.8);
+  background:rgba(0,0,0,.15);
+}
+@media(max-width:800px){
+  .hero > .wrap{
+    padding:40px 20px;
+  }
+}
   </style>
 </head>
 <body>
